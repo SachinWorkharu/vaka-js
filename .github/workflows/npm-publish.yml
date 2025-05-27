@@ -57,13 +57,13 @@ jobs:
 
       # - run: npm i
       - run: yarn install
-      - run: sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json
+      # - run: sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json
       # - run: sed -i 's/@vakaconsulting/@vaka-consulting/g' package.json
       # - run: yarn build
-      - run: yarn workspace @vaka-tech/config run build
-      - run: yarn workspace @vaka-tech/common run build
+      # - run: yarn workspace @vaka-tech/config run build
+      # - run: yarn workspace @vaka-tech/common run build
       - run: yarn workspace @vaka-consulting/web3-auth run build
-      - run: yarn workspace @vaka-tech/react run build
+      # - run: yarn workspace @vaka-tech/react run build
       - run: cat package.json
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
@@ -71,7 +71,8 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: |
               cd packages/web3-auth && \
-              sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json &&\
+              sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
+              cat package.json && \
               npm publish --tag beta
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
