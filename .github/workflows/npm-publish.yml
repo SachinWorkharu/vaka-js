@@ -68,8 +68,8 @@ jobs:
 
       - name: Configure .npmrc
         run: |
-        echo "@vaka-consulting:registry=https://npm.pkg.github.com" > ~/.npmrc
-        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GIT_TOKEN }}" >> ~/.npmrc
+            echo "@vaka-consulting:registry=https://npm.pkg.github.com" > ~/.npmrc
+            echo "//npm.pkg.github.com/:_authToken=${{ secrets.GIT_TOKEN }}" >> ~/.npmrc
 
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
