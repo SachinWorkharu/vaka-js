@@ -1,5 +1,5 @@
 import React from 'react'
-import { Web3AuthProvider } from '@vaka-tech/web3-auth'
+import { Web3AuthProvider } from '@vaka-consulting/web3-auth'
 import { Meta, StoryObj } from '@storybook/react'
 import AuthLoginComponent from './AuthLogin'
 import AuthLoginEmailComponent from './AuthLoginEmail'
