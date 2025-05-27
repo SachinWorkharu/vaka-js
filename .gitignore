@@ -255,4 +255,3 @@ $RECYCLE.BIN/
 package-lock.json
 # yarn.lock
 .yarnrc.yml
-.npmrc
