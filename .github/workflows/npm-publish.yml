@@ -78,7 +78,6 @@ jobs:
       - run: |
               cd packages/web3-auth && \
               sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
-              cp ../../.npmrc . && \
               cat package.json && \
               npm publish --tag beta
         env:
