@@ -74,6 +74,9 @@ jobs:
               sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta
+        with:
+          registry-url: https://npm.pkg.github.com/
+          scope: '@vakaconsulting'
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
