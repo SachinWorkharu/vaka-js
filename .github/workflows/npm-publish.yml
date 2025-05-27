@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://npm.pkg.github.com/
-          scope: '@vakaconsulting'
+          scope: '@vaka-consulting'
 
       # - run: npm i
       - run: yarn install
@@ -64,7 +64,7 @@ jobs:
       # - run: yarn workspace @vaka-tech/common run build
       - run: yarn workspace @vaka-consulting/web3-auth run build
       # - run: yarn workspace @vaka-tech/react run build
-      - run: cat package.json
+      - run: cat .npmrc
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
       #   env:
@@ -72,6 +72,7 @@ jobs:
       - run: |
               cd packages/web3-auth && \
               sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
+              cp ../../.npmrc . && \
               cat package.json && \
               npm publish --tag beta
         env:
