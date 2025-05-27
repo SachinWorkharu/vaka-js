@@ -41,9 +41,9 @@ jobs:
   publish-github-packages:
     needs: build
     runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          node-version: [ 22.x]
+    strategy:
+      matrix:
+        node-version: [ 22.x]
 
     permissions:
       packages: write
