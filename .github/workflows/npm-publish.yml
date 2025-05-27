@@ -9,34 +9,34 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 22.x]
+  # build:
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [ 22.x]
 
-    steps:
-      - uses: actions/checkout@v4
+  #   steps:
+  #     - uses: actions/checkout@v4
       
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
       
-      - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+  #     - name: Run install
+  #       uses: borales/actions-yarn@v4
+  #       with:
+  #         cmd: install # will run `yarn install` command
 
-      # - name: Setup Yarn
-      #   uses: threeal/setup-yarn-action@v2.0.0
-      #   with:
-      #     version: latest
+  #     # - name: Setup Yarn
+  #     #   uses: threeal/setup-yarn-action@v2.0.0
+  #     #   with:
+  #     #     version: latest
 
-      - name: Build
-        run: |
-          yarn --version
-          yarn build
+  #     - name: Build
+  #       run: |
+  #         yarn --version
+  #         yarn build
   
   publish-github-packages:
     needs: build
@@ -59,13 +59,19 @@ jobs:
       - run: yarn install
       - run: sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json
       - run: sed -i 's/@vakaconsulting/@vaka-consulting/g' package.json
-      - run: yarn build
+      # - run: yarn build
+      - run: yarn workspace @vaka-tech/config run build
+      - run: yarn workspace @vaka-tech/common run build
+      - run: yarn workspace @vaka-consulting/web3-auth run build
+      - run: yarn workspace @vaka-tech/react run build
       - run: cat package.json
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
       #   env:
       #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: npm publish --tag beta
+      - run: cd packages/web3-auth && npm publish --tag beta
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   # publish-npm:
   #   needs: build

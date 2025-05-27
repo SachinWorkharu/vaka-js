@@ -1,5 +1,5 @@
 import React, { createContext, Dispatch, useEffect, useReducer } from 'react'
-import type { Web3AuthProvider } from '@vaka-tech/web3-auth'
+import type { Web3AuthProvider } from '@vaka-consulting/web3-auth'
 import cookie from 'js-cookie'
 
 interface AuthState {
