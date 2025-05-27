@@ -7,7 +7,8 @@
   "repository": "https://github.com/vaka-consultancy/vaka-js",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "devDependencies": {
     "@vaka-tech/common": "^1.0.0",

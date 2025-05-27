@@ -115,7 +115,13 @@ function ExperienceChainsForm({ defaultValues, onPrevious, onSubmit }: FormProps
                   size={'small'}
                   error={Boolean(errors.experienceChainsOther)}
                   helperText={
-                    Boolean(errors.experienceChainsOther) ? <>{errors.experienceChainsOther?.message}</> : <></>
+                    Boolean(errors.experienceChainsOther)
+                      ? (typeof errors.experienceChainsOther?.message === 'string' || typeof errors.experienceChainsOther?.message === 'number'
+                          ? errors.experienceChainsOther?.message
+                          : errors.experienceChainsOther?.message
+                            ? String(errors.experienceChainsOther?.message)
+                            : '')
+                      : ''
                   }
                   fullWidth
                 />

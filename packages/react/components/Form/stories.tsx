@@ -70,7 +70,7 @@ export const CreateWalletForm: Story = {
 
 export const WalletMethodForm: Story = {
   name: 'WalletMethodForm',
-  render: () => <WalletMethodFormComponent onSubmit={handleSubmit} />,
+  render: () => <WalletMethodFormComponent canConnectWallet={false} canCreateWallet={false} onSubmit={handleSubmit}  />,
 }
 
 export default meta

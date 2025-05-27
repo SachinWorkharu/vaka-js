@@ -1,0 +1,24 @@
+{
+  "name": "@vaka-tech/config",
+  "version": "1.0.0",
+  "description": "Shared configuration packages for Vaka monorepo (babel, eslint, prettier, jest, stylelint, commitlint, etc.)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "npm run build:babel && npm run build:eslint && npm run build:prettier && npm run build:jest && npm run build:stylelint && npm run build:commitlint",
+    "build:babel": "esbuild babel-config-base/index.js --bundle --platform=node --outfile=dist/babel-config-base/index.js",
+    "build:eslint": "esbuild eslint-config-base/index.js --bundle --platform=node --outfile=dist/eslint-config-base/index.js",
+    "build:prettier": "esbuild prettier-config-base/index.js --bundle --platform=node --outfile=dist/prettier-config-base/index.js",
+    "build:jest": "esbuild jest-config-base/index.js --bundle --platform=node --outfile=dist/jest-config-base/index.js",
+    "build:stylelint": "esbuild stylelint-config-base/index.js --bundle --platform=node --outfile=dist/stylelint-config-base/index.js",
+    "build:commitlint": "esbuild commitlint-config-base/index.js --bundle --platform=node --outfile=dist/commitlint-config-base/index.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
