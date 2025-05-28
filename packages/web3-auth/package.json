@@ -23,8 +23,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@vakaconsulting/common": "^0.0.1-beta",
+  },
+  "devDependencies": {
     "axios": "^1.7.4",
     "@apollo/client": "^3.11.8"
   }
