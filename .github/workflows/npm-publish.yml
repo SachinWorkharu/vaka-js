@@ -81,10 +81,10 @@ jobs:
               sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
               sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
               cat package.json && \
-              npm publish
+              npm publish --tag beta
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
-spo
+
   # publish-npm:
   #   needs: build
   #   runs-on: ubuntu-latest
