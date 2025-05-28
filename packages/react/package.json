@@ -1,6 +1,6 @@
 {
   "name": "@vakaconsulting/react",
-  "version":"0.0.1-beta.10",
+  "version":"0.0.1-beta",
   "description": "React components, context & providers and hooks for usage in Web 3 apps.",
   "author": "Senny Kalidien <senny@vaka.consulting>",
   "license": "UNLICENSED",
@@ -9,16 +9,16 @@
     "url": "https://github.com/Vaka-Consulting/vaka-js.git"
   },
   "files": [
-    "dist"
+    "dist/react"
   ],
   "main": "index.js",
   "scripts": {
     "build": "tsc"
   },
   "peerDependencies": {
-    "@vakaconsulting/common": "^0.0.1-beta",
-    "@vakaconsulting/config": "^0.0.1-beta",
-    "@vakaconsulting/web3-auth": "^0.0.1-beta"    
+    "@vakaconsulting/common": "^0.0.1-beta.12",
+    "@vakaconsulting/config": "^0.0.1-beta.12",
+    "@vakaconsulting/web3-auth": "^0.0.1-beta.12"    
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
