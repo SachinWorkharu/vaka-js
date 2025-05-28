@@ -130,7 +130,7 @@ function WalletMethodForm({ canCreateWallet, canConnectWallet, onPrevious, onSub
                 )}
                 onInput={handleWalletAddressInput}
                 error={Boolean(errors.walletAddress)}
-                helperText={Boolean(errors.walletAddress) ? <>{errors.walletAddress?.message}</> : <></>}
+                helperText={errors.walletAddress ? String(errors.walletAddress.message) : ''}
                 fullWidth
               />
             </FormControl>

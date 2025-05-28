@@ -1,3 +1,4 @@
+/* eslint-disable react-perf/jsx-no-new-array-as-prop */
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import {
@@ -70,7 +71,7 @@ export const CreateWalletForm: Story = {
 
 export const WalletMethodForm: Story = {
   name: 'WalletMethodForm',
-  render: () => <WalletMethodFormComponent onSubmit={handleSubmit} />,
+  render: () => <WalletMethodFormComponent onSubmit={handleSubmit} canCreateWallet={false} canConnectWallet={false} />,
 }
 
 export default meta
