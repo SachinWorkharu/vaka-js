@@ -58,8 +58,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@vakaconsulting'
       
-      - name: Dump secret
-        run: echo -n "${{ secrets.NODE_AUTH_TOKEN }}" | xxd -ps
+      # - name: Dump secret
+      #   run: echo -n "${{ secrets.NODE_AUTH_TOKEN }}" | xxd -ps
       # - run: npm i
       - run: yarn install
       # - run: sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json
