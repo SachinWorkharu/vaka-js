@@ -24,7 +24,7 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "@vakaconsulting/common": "^0.0.1-beta",
+    "@vakaconsulting/common": "^0.0.1-beta"
   },
   "devDependencies": {
     "axios": "^1.7.4",
