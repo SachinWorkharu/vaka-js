@@ -70,7 +70,7 @@ jobs:
       - run: yarn workspace @vakaconsulting/web3-auth run build
       - run: yarn workspace @vakaconsulting/react run build
       
-      - run: cat .npmrc
+      # - run: cat .npmrc
 
       - name: Configure .npmrc
         run: |
