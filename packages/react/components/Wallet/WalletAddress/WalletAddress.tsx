@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
+import { truncateStringInMiddle } from '@vakaconsulting/common'
 import { useWallet, useAddress, useWalletList } from '@meshsdk/react'
 import { AccountBalanceWallet as AccountBalanceWalletIcon } from '@mui/icons-material'
 import { TextField } from '@mui/material'
-import { truncateStringInMiddle } from '../../../../common'
 import { CopyToClipboard } from '../../CopyToClipboard'
 
 interface Props {

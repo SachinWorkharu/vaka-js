@@ -1,4 +1,4 @@
-import { Asset } from '../../../../common'
+import { Asset } from '@vakaconsulting/common'
 
 export interface WalletExtendedState {
   adaBalance: number

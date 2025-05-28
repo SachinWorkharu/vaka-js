@@ -1,6 +1,6 @@
 import React from 'react'
+import { AuthWithOtp } from '@vakaconsulting/common'
 import { Box, Typography } from '@mui/material'
-import { AuthWithOtp } from '../../../../common'
 import { useAuthRegister } from '../../../hooks'
 
 function AuthVerification({ otp }: AuthWithOtp) {

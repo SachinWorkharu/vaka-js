@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Asset, LOVELACE_AMOUNT } from '@vakaconsulting/common'
 import { useAssets, useLovelace, useWallet } from '@meshsdk/react'
 import type { WalletExtended, WalletExtendedProps } from './types'
-import { Asset, LOVELACE_AMOUNT } from '../../../../common'
 
 export const useWalletExtendedStore = ({
   projectPrefix,

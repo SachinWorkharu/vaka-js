@@ -1,6 +1,6 @@
 import React from 'react'
+import { Web3AuthProvider } from '@vakaconsulting/web3-auth'
 import { Meta, StoryObj } from '@storybook/react'
-import { Web3AuthProvider } from '../../../../web3-auth'
 import { AuthRegisterContextProvider, WalletContextProvider, WalletExtendedContextProvider } from '../../../context'
 import { AuthRegisterType } from '../../../types'
 import { AuthRegister as AuthRegisterComponent } from '../../index'

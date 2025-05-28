@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
+import { WalletSignature } from '@vakaconsulting/common'
 import { useWizard } from 'react-use-wizard'
 import { useWallet } from '@meshsdk/react'
-import { WalletSignature } from '../../../../../common'
 import { useAuthRegister } from '../../../../hooks'
 import WalletSignatureForm from '../../../Form/forms/WalletSignatureForm'
 import { AuthRegisterStep } from '../types'

@@ -1,5 +1,5 @@
+import { ExperienceLevel } from '@vakaconsulting/common'
 import { AuthRegisterStep } from './types'
-import { ExperienceLevel } from '../../../../common'
 
 const inexperiencedLevels = [ExperienceLevel.Newbie]
 const experiencedLevels = [ExperienceLevel.Beginner, ExperienceLevel.Confident, ExperienceLevel.Expert]

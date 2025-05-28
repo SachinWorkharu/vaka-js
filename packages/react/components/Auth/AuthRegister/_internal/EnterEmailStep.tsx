@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
+import { AuthRegisterCollectedData } from '@vakaconsulting/common'
 import { useWizard } from 'react-use-wizard'
 import { Alert, Box } from '@mui/material'
-import { AuthRegisterCollectedData } from '../../../../../common'
 import { useAuthRegister } from '../../../../hooks'
 import { EmailForm } from '../../../Form'
 import { AuthRegisterStep } from '../types'

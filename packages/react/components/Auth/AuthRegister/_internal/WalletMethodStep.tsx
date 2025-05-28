@@ -1,6 +1,6 @@
 import React from 'react'
+import { AuthRegisterCollectedData, WalletMethod } from '@vakaconsulting/common'
 import { useWizard } from 'react-use-wizard'
-import { AuthRegisterCollectedData, WalletMethod } from '../../../../../common'
 import { useAuthRegister } from '../../../../hooks'
 import WalletMethodForm from '../../../Form/forms/WalletMethodForm'
 import { AuthRegisterStep } from '../types'

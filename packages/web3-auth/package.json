@@ -15,7 +15,7 @@
     "build": "tsc"
   },
   "files": [
-    "dist/"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   },
   
   
-  "main": "index.js",
+  "main": "dist/index.js",
   
   "peerDependencies": {
     "@vakaconsulting/common": "^0.0.1-beta"

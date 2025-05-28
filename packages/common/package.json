@@ -14,11 +14,11 @@
     "build": "tsc"
   },
   "files": [
-    "dist/"
+    "dist"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vaka-Consulting/vaka-js.git"
   },
-  "main": "index.js"
+  "main": "dist/index.js"
 }

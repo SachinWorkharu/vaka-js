@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/"
+    "dist/**"
   ],
   "scripts": {
     "build": "npm run build:babel && npm run build:eslint && npm run build:prettier && npm run build:jest && npm run build:stylelint && npm run build:commitlint",

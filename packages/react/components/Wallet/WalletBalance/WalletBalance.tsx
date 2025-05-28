@@ -1,6 +1,6 @@
 import React from 'react'
-import { Typography } from '@mui/material'
 import { toCryptoCurrencyAmount } from '@vakaconsulting/common'
+import { Typography } from '@mui/material'
 import { useWalletExtended } from '../../../hooks'
 
 function WalletBalance() {

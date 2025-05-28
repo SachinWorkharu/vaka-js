@@ -1,6 +1,6 @@
 import React from 'react'
+import { ExperienceLevel } from '@vakaconsulting/common'
 import { useWizard } from 'react-use-wizard'
-import { ExperienceLevel } from '../../../../../common'
 import { useAuthRegister } from '../../../../hooks'
 import ExperienceLevelForm from '../../../Form/forms/ExperienceLevelForm'
 import { AuthRegisterStep } from '../types'
