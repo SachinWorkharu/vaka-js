@@ -67,10 +67,10 @@ jobs:
       # - run: yarn workspace @vaka-tech/react run build
       - run: cat .npmrc
 
-      # - name: Configure .npmrc
-      #   run: |
-      #       echo "@vaka-consulting:registry=https://npm.pkg.github.com" > ~/.npmrc
-      #       echo "//npm.pkg.github.com/:_authToken=${{ secrets.GIT_TOKEN }}" >> ~/.npmrc
+      - name: Configure .npmrc
+        run: |
+            echo "@vaka-consulting:registry=https://registry.npmjs.org" > ~/.npmrc
+            echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
 
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
@@ -79,7 +79,7 @@ jobs:
       - run: |
               cd packages/web3-auth && \
               sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
-              sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
+              sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
               cat package.json && \
               npm publish --tag beta
         env:
