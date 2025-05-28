@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { AuthWithOtp, AuthRequestWithOtp } from '@vaka-consulting/common'
+import { AuthWithOtp, AuthRequestWithOtp } from '@vakaconsulting/common'
 import { Alert, Box, Link, Typography } from '@mui/material'
 import { useAuth } from '../../../hooks'
 import EmailForm from '../../Form/forms/EmailForm'

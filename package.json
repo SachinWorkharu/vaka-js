@@ -63,9 +63,9 @@
   },
   "devDependencies": {
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
-    "@vaka-consulting/commitlint-config-base": "^0.0.1-beta",
-    "@vaka-consulting/eslint-config-base": "^0.0.1-beta",
-    "@vaka-consulting/prettier-config-base": "^0.0.1-beta",
+    "@vakaconsulting/commitlint-config-base": "^0.0.1-beta",
+    "@vakaconsulting/eslint-config-base": "^0.0.1-beta",
+    "@vakaconsulting/prettier-config-base": "^0.0.1-beta",
     "husky": "^8.0.0",
     "lerna": "^8.1.8",
     "lint-staged": "^13.0.1"

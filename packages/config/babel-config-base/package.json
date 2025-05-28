@@ -1,5 +1,5 @@
 {
-  "name": "@vaka-consulting/babel-config-base",
+  "name": "@vakaconsulting/babel-config-base",
   "version": "0.0.1-beta",
   "description": "Shared Babel configuration",
   "author": "Senny Kalidien <senny@vaka.consulting>",

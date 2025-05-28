@@ -1,6 +1,6 @@
 import { graphql, HttpResponse } from 'msw'
 import { otp as validOtp, session } from '../data'
-import { ApiResponseStatus } from '@vaka-consulting/common'
+import { ApiResponseStatus } from '@vakaconsulting/common'
 
 export const requestOtp = graphql.query('RequestOtp', ({ variables }) => {
   const { email } = variables

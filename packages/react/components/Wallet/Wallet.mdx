@@ -14,7 +14,7 @@ import { WalletPicker } from './WalletPicker/stories'
 
 ## Context & Hooks
 
-These components only work when used with the following context/providers in `@vaka-consulting/react` package:
+These components only work when used with the following context/providers in `@vakaconsulting/react` package:
 
 ### Context
 
@@ -24,7 +24,7 @@ Required context that should be wrapped around the components:
 - `WalletExtendedProvider` context/wallet.ts
 
 ```
-import { WalletProvider, WalletExtendedProvider } from '@vaka-consulting/react'
+import { WalletProvider, WalletExtendedProvider } from '@vakaconsulting/react'
 
 <WalletProvider>
   <WalletExtendedProvider // Does not work if not wrapped in WalletProvider
@@ -46,7 +46,7 @@ Only works within the context of the `WalletProvider` or `WalletExtendedProvider
 - `useExtendedWallet()` - hooks/wallet.ts
 
 ```
-import { useWallet, useExtendedWallet } from '@vaka-consulting/react'
+import { useWallet, useExtendedWallet } from '@vakaconsulting/react'
 
 function MyComponent() {
   const { connect, disconnect, isConnected, isConnecting, wallet } = useWallet()

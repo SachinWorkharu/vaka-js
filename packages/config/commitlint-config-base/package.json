@@ -1,5 +1,5 @@
 {
-	"name": "@vaka-consulting/commitlint-config-base",
+	"name": "@vakaconsulting/commitlint-config-base",
 	"version": "0.0.1-beta",
 	"description": "Shared Commitlint configuration.",
 	"author": "Senny Kalidien <senny@vaka.consulting>",

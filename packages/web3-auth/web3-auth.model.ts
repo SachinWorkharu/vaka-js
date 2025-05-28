@@ -6,7 +6,7 @@ import {
   ApiResponseStatus,
   AuthSession,
   AuthStatus,
-} from '@vaka-consulting/common'
+} from '@vakaconsulting/common'
 
 interface ApiResponse<TResponse> {
   data: {

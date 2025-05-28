@@ -1,5 +1,5 @@
 {
-  "name": "@vaka-consulting/jest-config-base",
+  "name": "@vakaconsulting/jest-config-base",
   "version": "0.0.1-beta",
   "description": "Shared Jest configuration.",
   "author": "Senny Kalidien <senny@vaka.consulting>",

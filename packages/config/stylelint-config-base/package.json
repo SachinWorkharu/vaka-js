@@ -1,5 +1,5 @@
 {
-	"name": "@vaka-consulting/stylelint-config-base",
+	"name": "@vakaconsulting/stylelint-config-base",
 	"version": "0.0.1-beta",
 	"description": "Shared Stylelint configuration for usage across our apps.",
 	"author": "Senny Kalidien <senny@vaka.consulting>",

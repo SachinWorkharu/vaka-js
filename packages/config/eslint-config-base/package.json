@@ -1,5 +1,5 @@
 {
-  "name": "@vaka-consulting/eslint-config-base",
+  "name": "@vakaconsulting/eslint-config-base",
   "version": "0.0.1-beta",
   "description": "Shared eslint configuration.",
   "author": "Senny Kalidien <senny@vaka.consulting>",

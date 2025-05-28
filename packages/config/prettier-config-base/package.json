@@ -1,5 +1,5 @@
 {
- "name": "@vaka-consulting/prettier-config-base",
+ "name": "@vakaconsulting/prettier-config-base",
  "version": "0.0.1-beta",
  "description": "Shared Prettier configuration for usage across our apps.",
  "author": "Senny Kalidien <senny@vaka.consulting>",

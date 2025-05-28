@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@vaka-consulting/jest-config-base'),
+  ...require('@vakaconsulting/jest-config-base'),
 }

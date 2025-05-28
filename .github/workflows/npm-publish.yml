@@ -50,29 +50,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set env
-        run: echo "RELEASE_VERSION=0.0.1-beta.1" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=0.0.1-beta.2" >> $GITHUB_ENV
       - uses: actions/setup-node@v4
         with:
           # cache: false 
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org'
-          scope: '@vaka-dummy'
+          scope: '@vakaconsulting'
 
       # - run: npm i
       - run: yarn install
       # - run: sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json
-      # - run: sed -i 's/@vakaconsulting/@vaka-consulting/g' package.json
+      # - run: sed -i 's/@vakaconsulting/@vakaconsulting/g' package.json
       # - run: yarn build
-      - run: yarn workspace @vaka-consulting/config run build
-      - run: yarn workspace @vaka-consulting/common run build
-      - run: yarn workspace @vaka-consulting/web3-auth run build
-      - run: yarn workspace @vaka-consulting/react run build
+      - run: yarn workspace @vakaconsulting/config run build
+      - run: yarn workspace @vakaconsulting/common run build
+      - run: yarn workspace @vakaconsulting/web3-auth run build
+      - run: yarn workspace @vakaconsulting/react run build
       
       - run: cat .npmrc
 
       - name: Configure .npmrc
         run: |
-            echo "@vaka-consulting:registry=https://registry.npmjs.org" > ~/.npmrc
+            echo "@vakaconsulting:registry=https://registry.npmjs.org" > ~/.npmrc
             echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
 
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
@@ -80,7 +80,7 @@ jobs:
       - run: |
               cd packages/web3-auth && \
               sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
-              # sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
+              # sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
         env:
@@ -88,7 +88,7 @@ jobs:
       
       - run: |
               cd packages/react && \
-              # sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
+              # sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
               sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
@@ -98,7 +98,7 @@ jobs:
       
       - run: |
               cd packages/common && \
-              # sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
+              # sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
               sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
@@ -107,7 +107,7 @@ jobs:
       
       - run: |
               cd packages/config && \
-              # sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
+              # sed -i 's/@vakaconsulting/@vakaconsulting/g' package.json && \
               sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public

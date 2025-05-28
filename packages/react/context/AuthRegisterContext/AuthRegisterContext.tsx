@@ -1,6 +1,6 @@
 import React, { createContext, Dispatch, useReducer } from 'react'
-import { AuthRegisterCollectedData } from '@vaka-consulting/common'
-import type { Web3AuthProvider } from '@vaka-consulting/web3-auth'
+import { AuthRegisterCollectedData } from '@vakaconsulting/common'
+import type { Web3AuthProvider } from '@vakaconsulting/web3-auth'
 import { AuthRegisterConfig } from '../../types'
 
 interface AuthRegisterState {

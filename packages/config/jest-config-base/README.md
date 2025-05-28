@@ -1,4 +1,4 @@
-# @vaka-consulting/eslint-config-base
+# @vakaconsulting/eslint-config-base
 
 Shared eslint configuration for usage across our apps.
 
@@ -9,7 +9,7 @@ Within the application project you're working on you can create a `.eslintrc` fi
 ```
 /** ESlint configuration file that can be extended */
 {
-	"extends": ["@vaka-consulting/eslint-config-base"]
+	"extends": ["@vakaconsulting/eslint-config-base"]
 }
 ```
 

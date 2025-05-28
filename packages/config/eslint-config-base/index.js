@@ -86,6 +86,6 @@ module.exports = {
     react: {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
-    'import/internal-regex': '^@vaka-consulting/',
+    'import/internal-regex': '^@vakaconsulting/',
   },
 }
