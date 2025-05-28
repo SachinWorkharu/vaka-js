@@ -1,30 +1,12 @@
 {
-  // https://www.typescriptlang.org/tsconfig#compilerOptions
-  // "extends": "@tsconfig/strictest/tsconfig.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "allowJs": true,
-    "checkJs": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react",
-    "module": "ES2022",
-    "preserveConstEnums": true,
-    "moduleResolution": "Bundler",
-    "sourceMap": true,
-    "target": "es2022",
     "outDir": "dist",
-    "experimentalDecorators": true,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  
   "include": [
     "components/**/*",
     "constants/**/*",
@@ -33,8 +15,5 @@
     "types/**/*",
     "utils/**/*",
     "index.ts"
-  ],
-  // "files": ["src/@types/graphql.d.ts"],
-  "exclude": ["node_modules"],
-  
+  ]
 }
