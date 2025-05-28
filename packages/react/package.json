@@ -35,7 +35,7 @@
   "peerDependencies": {
     "@vakaconsulting/babel-config-base": "^0.0.1-beta",
     "@vakaconsulting/common": "^0.0.1-beta",
-    "@vakaconsulting/jest-config-base": "^0.0.1-beta",
+    "@vakaconsulting/config": "^0.0.1-beta",
     "@vakaconsulting/web3-auth": "^0.0.1-beta"
   },
   "devDependencies": {
