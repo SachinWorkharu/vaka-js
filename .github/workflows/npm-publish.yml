@@ -79,7 +79,7 @@ jobs:
       
       - run: |
               cd packages/web3-auth && \
-              sed -i 's/"version":.*/"version":"{{ env.RELEASE_VERSION }}",/g' package.json && \
+              sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
@@ -89,7 +89,7 @@ jobs:
       - run: |
               cd packages/react && \
               sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
-              sed -i 's/"version":.*/"version":"{{ env.RELEASE_VERSION }}",/g' package.json && \
+              sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
         env:
@@ -99,7 +99,7 @@ jobs:
       - run: |
               cd packages/common && \
               sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
-              sed -i 's/"version":.*/"version":"{{ env.RELEASE_VERSION }}",/g' package.json && \
+              sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
         env:
@@ -108,7 +108,7 @@ jobs:
       - run: |
               cd packages/config && \
               sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
-              sed -i 's/"version":.*/"version":"{{ env.RELEASE_VERSION }}",/g' package.json && \
+              sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
               cat package.json && \
               npm publish --tag beta --access public
         env:
