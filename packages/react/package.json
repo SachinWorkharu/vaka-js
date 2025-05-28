@@ -11,7 +11,7 @@
   "files": [
     "dist/react"
   ],
-  "main": "react/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "tsc"
   },
