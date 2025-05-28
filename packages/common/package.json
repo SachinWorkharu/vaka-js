@@ -7,6 +7,9 @@
   "scripts": {
     "build": "tsc"
   },
+  "files": [
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Vaka-Consulting/vaka-js.git"
