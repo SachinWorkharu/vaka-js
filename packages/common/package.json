@@ -3,6 +3,12 @@
   "version": "0.0.1-beta",
   "description": "Common variables, utils, types and more.",
   "author": "Senny Kalidien <senny@vaka.consulting>",
+  "contributors": [
+    {
+      "name": "Narayan Maharjan",
+      "email": "narayan@vaka.consulting"
+    }
+  ],
   "license": "UNLICENSED",
   "scripts": {
     "build": "tsc"
@@ -12,8 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vaka-Consulting/vaka-js.git"
+    "url": "git+https://github.com/Vaka-Consulting/vaka-js.git"
   },
-  "main": "index.js",
-  "gitHead": "8428fcaefb3bb3c17a1e006de3104140657113ad"
+  "main": "index.js"
 }

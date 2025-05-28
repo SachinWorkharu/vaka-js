@@ -10,19 +10,21 @@
     }
   ],
   "license": "UNLICENSED",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "files": [
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vaka-Consulting/vaka-js.git"
   },
   
-  "files": [
-    "dist/"
-  ],
+  
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
-  },
+  
   "peerDependencies": {
     "@vakaconsulting/common": "^0.0.1-beta"
   },
