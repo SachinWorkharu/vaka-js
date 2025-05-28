@@ -51,9 +51,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
+          cache: false 
           node-version: ${{ matrix.node-version }}
-          registry-url: https://npm.pkg.github.com/
-          scope: '@vaka-consulting'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@vaka-dummy'
 
       # - run: npm i
       - run: yarn install
@@ -66,10 +67,10 @@ jobs:
       # - run: yarn workspace @vaka-tech/react run build
       - run: cat .npmrc
 
-      - name: Configure .npmrc
-        run: |
-            echo "@vaka-consulting:registry=https://npm.pkg.github.com" > ~/.npmrc
-            echo "//npm.pkg.github.com/:_authToken=${{ secrets.GIT_TOKEN }}" >> ~/.npmrc
+      # - name: Configure .npmrc
+      #   run: |
+      #       echo "@vaka-consulting:registry=https://npm.pkg.github.com" > ~/.npmrc
+      #       echo "//npm.pkg.github.com/:_authToken=${{ secrets.GIT_TOKEN }}" >> ~/.npmrc
 
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
@@ -78,11 +79,12 @@ jobs:
       - run: |
               cd packages/web3-auth && \
               sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
+              sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
               cat package.json && \
-              npm publish --tag beta
+              npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+spo
   # publish-npm:
   #   needs: build
   #   runs-on: ubuntu-latest
