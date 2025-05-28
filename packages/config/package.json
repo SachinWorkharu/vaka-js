@@ -1,6 +1,6 @@
 {
-  "name": "@vaka-tech/config",
-  "version": "1.0.0",
+  "name": "@vaka-consulting/config",
+  "version": "0.0.1-beta",
   "description": "Shared configuration packages for Vaka monorepo (babel, eslint, prettier, jest, stylelint, commitlint, etc.)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

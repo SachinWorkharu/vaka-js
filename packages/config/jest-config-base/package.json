@@ -1,6 +1,6 @@
 {
-  "name": "@vaka-tech/jest-config-base",
-  "version": "1.0.0",
+  "name": "@vaka-consulting/jest-config-base",
+  "version": "0.0.1-beta",
   "description": "Shared Jest configuration.",
   "author": "Senny Kalidien <senny@vaka.consulting>",
   "license": "UNLICENSED",

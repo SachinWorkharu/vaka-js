@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ExperienceLevel } from '@vaka-tech/common'
+import { ExperienceLevel } from '@vaka-consulting/common'
 import { useWizard } from 'react-use-wizard'
 import { Box, Typography } from '@mui/material'
 import { useAuthRegister } from '../../../../hooks'

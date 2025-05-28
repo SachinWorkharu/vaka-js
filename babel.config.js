@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@vaka-tech/babel-config-base'),
+  ...require('@vaka-consulting/babel-config-base'),
 }

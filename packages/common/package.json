@@ -1,6 +1,6 @@
 {
-  "name": "@vaka-tech/common",
-  "version": "1.0.0",
+  "name": "@vaka-consulting/common",
+  "version": "0.0.1-beta",
   "description": "Common variables, utils, types and more.",
   "author": "Senny Kalidien <senny@vaka.consulting>",
   "license": "UNLICENSED",

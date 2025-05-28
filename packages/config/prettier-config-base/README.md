@@ -1,4 +1,4 @@
-# @vaka-tech/prettier-config-base
+# @vaka-consulting/prettier-config-base
 
 Shared prettier configuration for usage across our apps.
 
@@ -8,7 +8,7 @@ Within the application project you're working on you can create a `.prettierrc.j
 
 ```
 /** Prettier configuration file that can be extended */
-module.exports = { ...require('@vaka-tech/prettier-config-base') };
+module.exports = { ...require('@vaka-consulting/prettier-config-base') };
 ```
 
 This will import and extend the configuration from the `index.js` located in this package.

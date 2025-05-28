@@ -1,3 +1,3 @@
 module.exports = {
-	extends: ['@vaka-tech/commitlint-config-base'],
+	extends: ['@vaka-consulting/commitlint-config-base'],
 };

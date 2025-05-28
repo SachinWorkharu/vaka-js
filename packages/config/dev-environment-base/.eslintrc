@@ -1,4 +1,4 @@
 /** ESlint configuration file that can be extended */
 {
-	"extends": ["@vaka-tech/eslint-config-base"]
+	"extends": ["@vaka-consulting/eslint-config-base"]
 }

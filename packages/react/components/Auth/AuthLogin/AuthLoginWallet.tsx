@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { AuthWithWallet } from '@vaka-tech/common'
+import { AuthWithWallet } from '@vaka-consulting/common'
 import { useWallet } from '@meshsdk/react'
 import { Alert, Box, Typography } from '@mui/material'
 import { useAuth } from '../../../hooks'

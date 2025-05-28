@@ -1,4 +1,4 @@
-import type { UserAuthRegisterUserData, AuthRegisterData } from '@vaka-tech/common'
+import type { UserAuthRegisterUserData, AuthRegisterData } from '@vaka-consulting/common'
 
 export interface RegisterFormProps {
   onSubmit: (values: Partial<AuthRegisterData> | Partial<UserAuthRegisterUserData>) => void

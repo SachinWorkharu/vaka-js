@@ -5,7 +5,7 @@ import {
   AuthRequestWithOtp,
   AuthWithOtp,
   AuthWithWallet,
-} from '@vaka-tech/common'
+} from '@vaka-consulting/common'
 import cookie from 'js-cookie'
 import {
   AuthContext,
