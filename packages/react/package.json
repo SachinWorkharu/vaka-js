@@ -9,9 +9,8 @@
     "url": "https://github.com/Vaka-Consulting/vaka-js.git"
   },
   "files": [
-    "dist/react"
+    "dist"
   ],
-  "main": "index.js",
   "scripts": {
     "build": "tsc"
   },

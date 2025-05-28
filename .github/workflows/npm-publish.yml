@@ -67,9 +67,11 @@ jobs:
       # - run: sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json
       # - run: sed -i 's/@vakaconsulting/@vakaconsulting/g' package.json
       # - run: yarn build
+      - run: yarn cache clean
       - run: yarn workspace @vakaconsulting/config run build
       - run: yarn workspace @vakaconsulting/common run build
       - run: yarn workspace @vakaconsulting/web3-auth run build
+      
       - run: yarn workspace @vakaconsulting/react run build
 
       - run: |
