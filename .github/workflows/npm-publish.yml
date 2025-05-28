@@ -70,7 +70,7 @@ jobs:
       - name: Configure .npmrc
         run: |
             echo "@vaka-consulting:registry=https://registry.npmjs.org" > ~/.npmrc
-            echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
+            echo "//registry.npmjs.org/:_authToken=${{ secrets.VAKA_DUMMY_NODE_AUTH_TOKEN }}" >> ~/.npmrc
 
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       # - run: yarn publish --non-interactive --access public
@@ -83,7 +83,7 @@ jobs:
               cat package.json && \
               npm publish --tag beta
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.VAKA_DUMMY_NODE_AUTH_TOKEN}}
 
   # publish-npm:
   #   needs: build
