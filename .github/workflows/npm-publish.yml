@@ -78,7 +78,7 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: |
               cd packages/web3-auth && \
-              sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
+              # sed -i 's/"version":.*/"version":"${{ github.event.release.tag_name }}",/g' package.json && \
               sed -i 's/@vaka-consulting/@vaka-dummy/g' package.json && \
               cat package.json && \
               npm publish --tag beta
