@@ -71,6 +71,13 @@ jobs:
       - run: yarn workspace @vakaconsulting/common run build
       - run: yarn workspace @vakaconsulting/web3-auth run build
       - run: yarn workspace @vakaconsulting/react run build
+
+      - run: |
+              cd packages/react && \
+              ls -al dist && \
+              npm pack && \
+              ls -al && \
+              tar -tf vakaconsulting-react-${{ env.RELEASE_VERSION }}.tgz
       
       # - run: cat .npmrc
 
