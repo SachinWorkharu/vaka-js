@@ -9,7 +9,7 @@
     "url": "https://github.com/Vaka-Consulting/vaka-js.git"
   },
   "files": [
-    "dist/"
+    "dist/react"
   ],
   "main": "index.js",
   "scripts": {
