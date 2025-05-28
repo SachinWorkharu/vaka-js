@@ -12,7 +12,11 @@ function FormErrorsNotification({ errors }: FormErrorNotificationProps) {
       There are errors in the form. Please correct them before continuing.
       <ul>
         {Object.keys(errors).map((key) => (
-          <li key={key}>{errors?.[key]?.message ? <>{errors[key]?.message}</> : 'Unknown error'}</li>
+          <li key={key}>
+            {typeof errors?.[key]?.message === 'string'
+              ? errors[key]?.message
+              : 'Unknown error'}
+          </li>
         ))}
       </ul>
     </Alert>
