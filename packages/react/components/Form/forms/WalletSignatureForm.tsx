@@ -28,7 +28,7 @@ function WalletSignatureForm({ onSubmit }: FormProps<FormData>) {
 
   const handleSign = async (authType?: WalletSignAuthType) => {
     const stakeAddress = await wallet.getRewardAddresses().then((addresses) => addresses[0])
-    const walletSignature = await wallet.signData(stakeAddress, walletSignatureMessage)
+    const walletSignature = await wallet.signData(walletSignatureMessage, stakeAddress)
     if (authType) {
       onSubmit({ stakeAddress, walletSignature, authType })
     }else{
