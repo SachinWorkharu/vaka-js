@@ -1,6 +1,6 @@
 {
   "name": "@vakaconsulting/web3-auth",
-  "version":"0.0.16",
+  "version":"0.0.1-beta",
   "description": "Authenticates Web2 (email) and Web3 (dApp wallet) users.",
   "author": "Senny Kalidien <senny@vaka.consulting>",
   "contributors": [
@@ -26,7 +26,7 @@
   "main": "dist/index.js",
   
   "peerDependencies": {
-    "@vakaconsulting/common": "^0.0.16"
+    "@vakaconsulting/common": "^0.0.1-beta"
   },
   "devDependencies": {
     "axios": "^1.7.4",

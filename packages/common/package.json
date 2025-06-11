@@ -1,6 +1,6 @@
 {
   "name": "@vakaconsulting/common",
-  "version": "0.0.16",
+  "version": "0.0.1-beta",
   "description": "Common variables, utils, types and more.",
   "author": "Senny Kalidien <senny@vaka.consulting>",
   "contributors": [
