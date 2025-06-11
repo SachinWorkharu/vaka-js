@@ -3,7 +3,7 @@ import { AuthWithOtp } from '../../web3-auth.model'
 import { acceptJson } from '../fetch'
 
 export const createLoginWithOtpRequest = (apiEndpoint: string, data: AuthWithOtp): AxiosRequestConfig => {
-  const { otp: code } = data
+  const { otp, email } = data
 
   return {
     url: `${apiEndpoint}`,
@@ -11,14 +11,15 @@ export const createLoginWithOtpRequest = (apiEndpoint: string, data: AuthWithOtp
     headers: { ...acceptJson },
     data: {
       query: `
-        mutation LoginOtp($code: String!) {
-          loginOtp: verify_code(code: $code) {
-            accessToken: access_token
+        mutation LoginOtp($email: String!, $otp: String!) {
+          loginOtp: verify_otp(email: $email, otp: $otp) {
+            accessToken: access_token, email, stake_address
           }
         }
       `,
       variables: {
-        code,
+        otp,
+        email,
       },
     },
   }

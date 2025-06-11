@@ -7,6 +7,8 @@ import {
   AuthSession,
   AuthStatus,
   AuthWithWalletPolicyId,
+  AuthVerifyCodeData,
+  AuthResendVerificationLinkData,
 } from '@vakaconsulting/common'
 
 interface ApiResponse<TResponse> {
@@ -23,8 +25,21 @@ export interface Web3AuthProvider {
   loginWithWalletPolicyId: (data: AuthWithWalletPolicyId) => Promise<AuthSession>
   refreshSession: (data: AuthSession) => Promise<AuthSession>
   register: (data: AuthRegisterData) => Promise<AuthStatus>
+  verifyCode: (data: AuthVerifyCodeData) => Promise<AuthSession>
+  resendVerificationLink: (data: AuthResendVerificationLinkData) => Promise<AuthStatus>
   logout: () => Promise<void>
 }
 
-export type { ApiResponse, AuthRequestWithOtp, AuthWithOtp, AuthWithWallet, AuthWithWalletPolicyId, AuthSession, AuthStatus, AuthRegisterData }
+export type {
+  ApiResponse,
+  AuthRequestWithOtp,
+  AuthWithOtp,
+  AuthWithWallet,
+  AuthWithWalletPolicyId,
+  AuthSession,
+  AuthStatus,
+  AuthRegisterData,
+  AuthVerifyCodeData,
+  AuthResendVerificationLinkData,
+}
 export { ApiResponseStatus }

@@ -37,12 +37,13 @@ export interface AuthRequestWithOtp {
 }
 
 export interface AuthWithOtp {
+  email: string
   otp: string
 }
 
-export enum WalletSignAuthType{
-  POLICY_ID="POLICY_ID",
-  ASSSET_ID="POLICY_ASSET_ID",
+export enum WalletSignAuthType {
+  POLICY_ID = 'POLICY_ID',
+  ASSSET_ID = 'POLICY_ASSET_ID',
 }
 
 export interface AuthWithWallet {
@@ -74,6 +75,14 @@ export interface AuthRegisterData {
   stakeAddress?: string
   walletSignature?: WalletSignature
   userData?: Partial<UserAuthRegisterUserData>
+}
+
+export interface AuthVerifyCodeData {
+  code: string
+}
+
+export interface AuthResendVerificationLinkData {
+  email: string
 }
 
 export type AuthRegisterCollectedData = UserAuthRegisterUserData & Omit<AuthRegisterData, 'data'>
