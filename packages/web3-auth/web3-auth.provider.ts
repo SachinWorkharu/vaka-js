@@ -6,6 +6,8 @@ import {
   createRequestLoginWithOtpRequest,
   createRefreshSessionRequest,
   createRegisterRequest,
+  createVerifyCodeRequest,
+  createResendVerificationLinkRequest,
 } from './api/requests'
 import * as model from './web3-auth.model'
 
@@ -125,6 +127,40 @@ class Web3AuthProvider implements model.Web3AuthProvider {
       this.transformErrors(response.errors)
 
       return response.data.register
+    } catch (error) {
+      if (error instanceof Error) {
+        throw error as Error
+      }
+
+      throw new Error(`Error logging in: ${error}`)
+    }
+  }
+
+  public async verifyCode(data: model.AuthVerifyCodeData) {
+    try {
+      const request = createVerifyCodeRequest(this.apiEndpoint, data)
+      const response = await fetchWeb3Auth<model.ApiResponse<model.AuthSession>>(request).then((res) => res.data)
+
+      this.transformErrors(response.errors)
+
+      return response.data.verifyCode
+    } catch (error) {
+      if (error instanceof Error) {
+        throw error as Error
+      }
+
+      throw new Error(`Error logging in: ${error}`)
+    }
+  }
+
+  public async resendVerificationLink(data: model.AuthResendVerificationLinkData) {
+    try {
+      const request = createResendVerificationLinkRequest(this.apiEndpoint, data)
+      const response = await fetchWeb3Auth<model.ApiResponse<model.AuthStatus>>(request).then((res) => res.data)
+
+      this.transformErrors(response.errors)
+
+      return response.data.resendVerificationLink
     } catch (error) {
       if (error instanceof Error) {
         throw error as Error

@@ -11,7 +11,8 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
   "files": [
     "dist"
