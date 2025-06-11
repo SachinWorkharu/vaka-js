@@ -99,15 +99,15 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
       
-      - run: |
-              cd packages/react && \
-              # sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
-              # sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
-              cat package.json && \
-              ls -al dist && \
-              npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+      # - run: |
+      #         cd packages/react && \
+      #         # sed -i 's/@vakaconsulting/@vaka-dummy/g' package.json && \
+      #         # sed -i 's/"version":.*/"version":"${{ env.RELEASE_VERSION }}",/g' package.json && \
+      #         cat package.json && \
+      #         ls -al dist && \
+      #         npm publish --access public
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
       
       
       - run: |
