@@ -77,4 +77,12 @@ export interface AuthRegisterData {
   userData?: Partial<UserAuthRegisterUserData>
 }
 
+export interface AuthVerifyCodeData {
+  code: string
+}
+
+export interface AuthResendVerificationLinkData {
+  email: string
+}
+
 export type AuthRegisterCollectedData = UserAuthRegisterUserData & Omit<AuthRegisterData, 'data'>
