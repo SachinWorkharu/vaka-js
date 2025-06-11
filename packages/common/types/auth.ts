@@ -37,12 +37,13 @@ export interface AuthRequestWithOtp {
 }
 
 export interface AuthWithOtp {
+  email: string
   otp: string
 }
 
-export enum WalletSignAuthType{
-  POLICY_ID="POLICY_ID",
-  ASSSET_ID="POLICY_ASSET_ID",
+export enum WalletSignAuthType {
+  POLICY_ID = 'POLICY_ID',
+  ASSSET_ID = 'POLICY_ASSET_ID',
 }
 
 export interface AuthWithWallet {
